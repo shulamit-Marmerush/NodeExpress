@@ -19,10 +19,10 @@ app.get('/services', async (req, res) => {
         res.status(500).send('Error fetching services');
     }
 });
+
 app.use((req, res) => {
     res.status(404).send('404 Not Found');
 });
-
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
